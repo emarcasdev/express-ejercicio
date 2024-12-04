@@ -103,6 +103,8 @@ $(document).ready(function () {
       telefono: $("#agregarTlfn").val(),
     };
 
+    closeAddUserModal();
+
     // Hacemos una petición AJAX
     $.ajax({
       url: "http://localhost:5000/users/", // URL correcta según tu backend
