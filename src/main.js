@@ -4,7 +4,7 @@ $(document).ready(function () {
     $(".contenedor-cartas").empty();
     // Hecemos una petición AJAX
     $.ajax({
-      url: "http://localhost:5000/users",
+      url: "https://backend-api-flax.vercel.app/api/users",
       method: "GET",
       success: function (users) {
         console.log("Usuario obtenido:", users);
@@ -24,7 +24,7 @@ $(document).ready(function () {
     $(".contenedor-cartas").empty();
     // Hecemos una petición AJAX
     $.ajax({
-      url: "http://localhost:5000/users/user1/",
+      url: "https://backend-api-flax.vercel.app/api/users/user1",
       method: "GET",
       success: function (user) {
         console.log("Usuario obtenido:", user);
@@ -43,7 +43,7 @@ $(document).ready(function () {
     let id = $(".busqueda input").val();
     // Hecemos una petición AJAX
     $.ajax({
-      url: "http://localhost:5000/users/" + id,
+      url: "https://backend-api-flax.vercel.app/api/users/" + id,
       method: "GET",
       success: function (user) {
         console.log("Usuario obtenido:", user);
@@ -107,7 +107,7 @@ $(document).ready(function () {
 
     // Hacemos una petición AJAX
     $.ajax({
-      url: "http://localhost:5000/users/", // URL correcta según tu backend
+      url: "https://backend-api-flax.vercel.app/api/users", // URL correcta según tu backend
       method: "POST",
       contentType: "application/json", // Especificar que enviamos JSON
       data: JSON.stringify(nuevoUsuario), // Convertir el objeto a JSON
